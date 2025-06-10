@@ -1,0 +1,658 @@
+/* Definição de variáveis CSS para cores e fontes, facilitando a manutenção */
+:root {
+    --primary-color: #FFC107; /* Amarelo vibrante, seguindo o padrão Bootstrap 'warning' */
+    --secondary-color: #212529; /* Preto/Muito Escuro para texto e fundos */
+    --light-bg: #f8f9fa; /* Fundo claro para seções e hover sutil */
+    --dark-bg: #212529; /* Fundo muito escuro para navbar, footer e seções escuras */
+    --text-color: #333; /* Cor padrão para texto (um cinza escuro) */
+    --font-family-base: 'Open Sans', sans-serif; /* Fonte principal para legibilidade */
+}
+
+/* Força a cor primária (amarelo) para a classe text-primary do Bootstrap */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+
+/* Estilo geral do HTML para rolagem suave ao navegar pelas seções */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo do corpo da página: padding superior para a navbar fixa, fonte e cor do texto */
+body {
+    padding-top: 70px; /* Espaçamento para a navbar fixa */
+    font-family: var(--font-family-base); /* Aplica a fonte personalizada */
+    color: var(--text-color); /* Cor padrão do texto */
+}
+
+/* Estilo da Navbar: cor de fundo escura, sombra e transição para os links */
+.navbar {
+    background-color: var(--dark-bg) !important; /* Fundo preto/muito escuro */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra suave para profundidade */
+}
+
+.navbar-brand img {
+    /* Ajusta o filtro do logo para melhor visibilidade, se for branco */
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important; /* Cor dos links da navbar */
+    font-weight: 600;
+    transition: color 0.3s ease; /* Transição suave na cor */
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color) !important; /* Cor de destaque (amarelo) ao passar o mouse */
+}
+
+/* Hero Section: Seção principal com banner e texto centralizado */
+.hero {
+    height: 100vh; /* Ocupa 100% da altura da viewport */
+    /* Imagem de fundo com overlay linear para melhor contraste do texto branco */
+    /* >>>>> ATENÇÃO: ALTERE 'img/banner.jpg' PARA O CAMINHO DA SUA NOVA IMAGEM <<<<< */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/Banner.jpg') center/cover no-repeat;
+    background-size: cover; /* Garante que a imagem cubra toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Adiciona o efeito parallax: a imagem de fundo fica fixa enquanto o conteúdo rola */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Cor do texto branco */
+}
+
+.hero h1 {
+    font-size: 3.5em; /* Tamanho do título responsivo */
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto para destaque */
+}
+
+.hero p.lead {
+    font-size: 1.25em;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo dos botões */
+.btn-primary { /* Botão principal (amarelo) */
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--secondary-color); /* Texto preto no botão amarelo */
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 50px; /* Botões mais arredondados */
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%); /* Escurece o amarelo no hover */
+    border-color: darken(var(--primary-color), 10%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-dark { /* Botão secundário (preto) */
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: #fff; /* Texto branco no botão preto */
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: lighten(var(--secondary-color), 10%); /* Clarea o preto no hover */
+    border-color: lighten(var(--secondary-color), 10%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-success { /* Botão do WhatsApp (mantido verde padrão) */
+    background-color: #25d366; /* Verde WhatsApp */
+    border-color: #25d366;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: darken(#25d366, 10%);
+    border-color: darken(#25d366, 10%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estilo geral para seções: padding e alinhamento do título */
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+section h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--secondary-color); /* Títulos em preto */
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block; /* Para centralizar a linha decorativa abaixo */
+}
+
+section h2::after { /* Linha decorativa abaixo dos títulos para um toque moderno */
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color); /* Cor da linha conforme a primary-color (amarelo) */
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* Estilo para o título "Nossa Equipe" */
+h3.text-secondary {
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--secondary-color) !important; /* Força a cor preta */
+    margin-top: 60px; /* Espaçamento superior */
+    margin-bottom: 30px; /* Espaçamento inferior */
+}
+
+/* Ajuste para justificar o texto na seção "Sobre" */
+#sobre p {
+    text-align: justify; /* Justifica o texto */
+    text-justify: inter-word; /* Melhora a quebra de palavras para justificação */
+}
+
+
+/* Estilo dos cards de serviço: fundo branco, sombra e efeito de hover */
+.service-card {
+    background-color: #ffffff !important; /* Fundo branco forçado para evitar qualquer tom amarelado */
+    border-radius: 12px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Sombra mais pronunciada */
+    min-height: 320px; /* Garante altura mínima para alinhamento uniforme */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    text-align: center;
+}
+
+.service-card:hover {
+    background-color: var(--light-bg) !important; /* Fundo cinza muito claro no hover */
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Sombra mais forte no hover para destaque */
+}
+
+/* Estilo para as imagens dos ícones dentro dos cards */
+.service-card .service-icon-img {
+    margin-bottom: 20px;
+    /* Removido o filtro de sombra para as imagens dos cards, conforme sua solicitação */
+}
+
+.service-card h5 {
+    color: var(--secondary-color); /* Título do card em preto */
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.service-card ul {
+    width: 100%; /* Garante que a lista ocupe toda a largura */
+    padding-left: 20px; /* Adiciona padding à lista */
+    text-align: left; /* Alinha o texto da lista à esquerda */
+}
+
+.service-card ul li {
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Estilo dos membros da equipe (Nossa Equipe) */
+.team-member {
+    text-align: center;
+    padding: 15px;
+    /* Adicionado display flex para controlar o alinhamento vertical */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: flex-start; /* Alinha ao topo */
+}
+
+.team-member img {
+    width: 150px; /* Tamanho fixo da imagem */
+    height: 150px; /* Garante que a imagem seja um círculo perfeito */
+    object-fit: cover; /* Corta a imagem para preencher o círculo */
+    border: 3px solid var(--primary-color); /* Borda amarela nas fotos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 15px; /* Adiciona espaço abaixo da imagem */
+}
+
+.team-member img:hover {
+    transform: scale(1.05); /* Leve zoom no hover */
+    box-shadow: 0 8鸣 20px rgba(0, 0, 0, 0.2); /* Sombra no hover */
+}
+
+.team-member h5 {
+    margin-top: 0; /* Remove margem superior extra se o padding já cuidar */
+    margin-bottom: 5px;
+    color: var(--secondary-color); /* Nome em preto */
+}
+
+.team-member p {
+    color: #6c757d; /* Função em cinza suave */
+    font-size: 0.9em;
+    margin-bottom: 0; /* Remove margem inferior para evitar espaçamento indesejado */
+}
+
+/* Estilo para a seção de depoimentos */
+.testimonial-card {
+    background-color: #ffffff; /* Fundo branco para os cards de depoimento */
+    border: 1px solid #e0e0e0; /* Borda suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card h5 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.testimonial-card p {
+    font-size: 1.0em;
+    color: #555;
+}
+
+.testimonial-card .text-warning {
+    color: var(--primary-color) !important; /* Garante que as estrelas sejam amarelas */
+}
+
+/* Estilo do container do mapa (para o iframe do Google Maps) */
+.mapa-responsive {
+    overflow: hidden;
+    position: relative;
+    height: auto; /* Ajuste para não usar padding-bottom como proporção */
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mapa-responsive iframe {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* A altura do iframe é definida no HTML como 350px */
+}
+
+/* Estilo do formulário de contato */
+#contactForm {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+#contactForm input,
+#contactForm textarea {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    font-size: 1em;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: var(--primary-color); /* Borda amarela no foco */
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25); /* Sombra de foco com cor primária (amarelo) */
+}
+
+/* Estilo para a mensagem de sucesso/erro do formulário */
+#formMessage {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: none; /* Escondido por padrão */
+    font-weight: 600;
+}
+
+#formMessage.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#formMessage.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Estilo das informações de contato rápidas (ao lado do mapa) */
+.quick-contact-info {
+    /* Já estilizado com bg-white, text-dark, p-4, rounded-3, shadow no HTML */
+    min-height: 350px; /* Define a altura mínima para igualar a altura do mapa */
+    display: flex; /* Adicionado para que o conteúdo preença a altura */
+    flex-direction: column; /* Conteúdo em coluna para flexbox */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.quick-contact-info h4 {
+    border-bottom: 2px solid var(--primary-color); /* Linha amarela sob o título */
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.quick-contact-info ul li {
+    margin-bottom: 20px; /* Espaçamento entre os itens de contato */
+}
+
+.quick-contact-info ul li i {
+    color: var(--primary-color); /* Ícones de contato em amarelo */
+    min-width: 30px; /* Garante que os ícones tenham espaço suficiente */
+}
+
+.quick-contact-info ul li h6 {
+    font-size: 1.1em;
+    color: var(--secondary-color); /* Títulos das infos em preto */
+}
+
+.quick-contact-info ul li p {
+    font-size: 1em;
+    margin-bottom: 0;
+    color: #555;
+}
+
+.quick-contact-info ul li a {
+    color: #555; /* Cor do link para email/whatsapp na info de contato */
+    transition: color 0.3s ease;
+}
+
+.quick-contact-info ul li a:hover {
+    color: var(--primary-color); /* Amarelo no hover */
+}
+
+/* Estilo para o ícone de relógio na seção de localização (Aumentado) */
+.quick-contact-info ul li .fa-clock {
+    font-size: 2.5em !important; /* Aumenta o tamanho do ícone do relógio */
+    align-self: center; /* Alinha o ícone no centro da linha */
+    min-width: 40px; /* Garante espaço para o ícone maior */
+}
+
+/* Footer - Rodapé da página com ícones sociais */
+footer {
+    background-color: var(--dark-bg); /* Fundo preto */
+    color: #fff;
+    font-size: 0.9em;
+    padding: 30px 0;
+}
+
+footer a {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary-color); /* Ícones sociais em amarelo no hover */
+}
+
+/* Estilo para o botão flutuante do WhatsApp */
+.whatsapp-float {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 20px; /* 20px do rodapé */
+    right: 20px; /* 20px da direita */
+    background-color: #25D366; /* Cor verde do WhatsApp */
+    color: white; /* Cor do ícone branco */
+    width: 60px; /* Largura do botão */
+    height: 60px; /* Altura do botão */
+    border-radius: 50%; /* Torna o botão circular */
+    text-align: center;
+    font-size: 28px;
+    line-height: 60px; /* Centraliza o ícone verticalmente */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    animation: pulse 2s infinite; /* Aplica a animação de pulso */
+    display: flex; /* Usar flexbox para centralizar o ícone */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1); /* Aumenta um pouco o botão no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa no hover */
+    color: white; /* Garante que a cor do ícone não mude no hover */
+    animation: none; /* Remove a animação de pulso no hover */
+}
+
+.whatsapp-float i {
+    color: white; /* Garante que o ícone interno seja branco */
+}
+
+/* Estilo para o botão flutuante do Analisador de Sintomas */
+.symptom-analyzer-float {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 20px; /* 20px do rodapé */
+    left: 20px; /* 20px da esquerda (oposto ao WhatsApp) */
+    background-color: var(--primary-color); /* Cor amarela */
+    color: var(--secondary-color); /* Texto/ícone preto */
+    width: 60px; /* Largura do botão */
+    height: 60px; /* Altura do botão */
+    border-radius: 50%; /* Torna o botão circular */
+    text-align: center;
+    font-size: 28px;
+    line-height: 60px; /* Centraliza o ícone verticalmente */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    animation: pulse-yellow 2s infinite; /* Aplica a animação de pulso amarela */
+    display: flex; /* Usar flexbox para centralizar o ícone */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    border: none; /* Remove a borda padrão do botão */
+    cursor: pointer; /* Indica que é clicável */
+}
+
+.symptom-analyzer-float:hover {
+    transform: scale(1.1); /* Aumenta um pouco o botão no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa no hover */
+    animation: none; /* Remove a animação de pulso no hover */
+}
+
+.symptom-analyzer-float i {
+    color: var(--secondary-color); /* Garante que o ícone interno seja preto */
+}
+
+
+/* Animação de pulso (Keyframes) */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); /* Sombra verde */
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Nova animação de pulso para o botão amarelo */
+@keyframes pulse-yellow {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); /* Sombra amarela */
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 15px rgba(255, 193, 7, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+    }
+}
+
+/* Estilos para os cards de redes sociais */
+.social-card {
+    background-color: #ffffff !important;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinha o conteúdo ao topo para evitar cortes */
+    text-align: center;
+    overflow: hidden; /* Garante que qualquer conteúdo que excede o card seja cortado */
+    height: auto; /* Permite que o card cresça conforme o conteúdo */
+    padding-bottom: 20px; /* Adiciona um padding na parte inferior do card */
+}
+
+.social-card:hover {
+    background-color: var(--light-bg) !important;
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.social-card i {
+    color: var(--primary-color); /* Ícones sociais em amarelo */
+}
+
+.social-card .btn {
+    margin-top: 15px; /* Ajusta a margem superior do botão dentro do card */
+    margin-bottom: 0; /* Garante que não haja margem extra abaixo do botão */
+}
+
+.instagram-embed-placeholder,
+.facebook-embed-placeholder,
+.tiktok-embed-placeholder {
+    width: 100%;
+    margin: 15px auto 0 auto;
+    background-color: var(--light-bg);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto; /* Permite que o placeholder se ajuste ao conteúdo */
+    justify-content: center;
+    overflow-y: auto; /* Permite rolagem vertical se o conteúdo for maior que o placeholder */
+    /* Removido min-height */
+}
+
+.instagram-embed-placeholder img,
+.facebook-embed-placeholder img,
+.tiktok-embed-placeholder img {
+    width: 100%;
+    height: auto; /* Permite que a imagem se ajuste à altura do conteúdo */
+    object-fit: contain; /* Ajusta a imagem para caber sem cortar */
+    border-radius: 4px;
+}
+
+
+/* Media queries para responsividade, ajustando elementos em telas menores */
+@media (max-width: 991px) { /* Para telas menores que large (col-lg-X) */
+    .contact-info,
+    .quick-contact-info, /* Ajuste para a nova classe */
+    #contactForm {
+        height: auto !important; /* Remove height:100% em telas menores para evitar problemas */
+        min-height: auto !important; /* Remove min-height fixo em telas menores */
+    }
+
+    .quick-contact-info h4 {
+        text-align: center; /* Centraliza o título das informações de contato rápidas em mobile */
+    }
+
+    .whatsapp-float,
+    .symptom-analyzer-float { /* Aplica o mesmo tamanho em mobile para ambos os botões */
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        line-height: 50px;
+        bottom: 15px;
+    }
+    .whatsapp-float {
+        right: 15px;
+    }
+    .symptom-analyzer-float {
+        left: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em; /* Reduz o tamanho do título em telas menores */
+    }
+
+    .hero p.lead {
+        font-size: 1em;
+    }
+
+    section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+
+    h3.text-secondary {
+        font-size: 1.5em; /* Ajusta o tamanho do título da equipe em telas menores */
+    }
+
+    .service-card {
+        min-height: auto; /* Remove altura mínima em mobile para melhor adaptação */
+    }
+
+    .service-card ul {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .service-card ul li {
+        text-align: left; /* Garante alinhamento à esquerda para as listas de serviços */
+        padding-left: 10px;
+    }
+
+    .team-member img {
+        width: 120px; /* Ajusta o tamanho das imagens da equipe em mobile */
+        height: 120px;
+    }
+
+    .social-card .instagram-embed-placeholder,
+    .social-card .facebook-embed-placeholder,
+    .social-card .tiktok-embed-placeholder {
+        height: auto; /* Deixa a altura ser determinada pelo conteúdo */
+        min-height: 80px; /* Reduzi o min-height para ainda mais flexibilidade */
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand img {
+        height: 40px; /* Reduz o logo em telas muito pequenas */
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p.lead {
+        font-size: 0.9em;
+    }
+}
