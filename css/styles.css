@@ -51,11 +51,10 @@ body {
 .hero {
     height: 100vh; /* Ocupa 100% da altura da viewport */
     /* Imagem de fundo com overlay linear para melhor contraste do texto branco */
-    /* >>>>> ATENÇÃO: ALTERE 'img/banner.jpg' PARA O CAMINHO DA SUA NOVA IMAGEM <<<<< */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/Banner.jpg') center/cover no-repeat;
-    background-size: cover; /* Garante que a imagem cubra toda a área */
-    background-position: center; /* Centraliza a imagem */
-    background-attachment: fixed; /* Adiciona o efeito parallax: a imagem de fundo fica fixa enquanto o conteúdo rola */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://chiptronic.com.br/blog/wp-content/uploads/2018/03/1.jpg') center/cover no-repeat !important;
+    background-size: cover !important; /* Garante que a imagem cubra toda a área */
+    background-position: center !important; /* Centraliza a imagem */
+    background-attachment: fixed !important; /* Adiciona o efeito parallax: a imagem de fundo fica fixa enquanto o conteúdo rola */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,9 +62,9 @@ body {
 }
 
 .hero h1 {
-    font-size: 3.5em; /* Tamanho do título responsivo */
+    font-size: 3.5em;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto para destaque */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero p.lead {
@@ -76,48 +75,28 @@ body {
 }
 
 /* Estilo dos botões */
-.btn-primary { /* Botão principal (amarelo) */
+.btn-primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
-    color: var(--secondary-color); /* Texto preto no botão amarelo */
+    color: var(--secondary-color);
     font-weight: 600;
     padding: 12px 30px;
-    border-radius: 50px; /* Botões mais arredondados */
+    border-radius: 50px;
     transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: darken(var(--primary-color), 10%); /* Escurece o amarelo no hover */
+    background-color: darken(var(--primary-color), 10%);
     border-color: darken(var(--primary-color), 10%);
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.btn-dark { /* Botão secundário (preto) */
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
-    color: #fff; /* Texto branco no botão preto */
-    font-weight: 600;
-    padding: 12px 30px;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-}
-
 .btn-dark:hover {
-    background-color: lighten(var(--secondary-color), 10%); /* Clarea o preto no hover */
+    background-color: lighten(var(--secondary-color), 10%);
     border-color: lighten(var(--secondary-color), 10%);
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.btn-success { /* Botão do WhatsApp (mantido verde padrão) */
-    background-color: #25d366; /* Verde WhatsApp */
-    border-color: #25d366;
-    color: #fff;
-    font-weight: 600;
-    padding: 12px 30px;
-    border-radius: 50px;
-    transition: all 0.3s ease;
 }
 
 .btn-success:hover {
@@ -128,7 +107,6 @@ body {
 }
 
 
-/* Estilo geral para seções: padding e alinhamento do título */
 section {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -137,66 +115,70 @@ section {
 section h2 {
     font-size: 2.5em;
     font-weight: 700;
-    color: var(--secondary-color); /* Títulos em preto */
+    color: var(--secondary-color);
     margin-bottom: 40px;
     position: relative;
-    display: inline-block; /* Para centralizar a linha decorativa abaixo */
+    display: inline-block;
 }
 
-section h2::after { /* Linha decorativa abaixo dos títulos para um toque moderno */
+#nossa-proposta h2 {
+    color: #fff !important;
+    text-align: center !important;
+    display: block !important;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section h2::after {
     content: '';
     display: block;
     width: 60px;
     height: 4px;
-    background-color: var(--primary-color); /* Cor da linha conforme a primary-color (amarelo) */
+    background-color: var(--primary-color);
     margin: 10px auto 0 auto;
     border-radius: 2px;
 }
 
-/* Estilo para o título "Nossa Equipe" */
 h3.text-secondary {
     font-size: 2em;
     font-weight: 600;
-    color: var(--secondary-color) !important; /* Força a cor preta */
-    margin-top: 60px; /* Espaçamento superior */
-    margin-bottom: 30px; /* Espaçamento inferior */
+    color: var(--secondary-color) !important;
+    margin-top: 60px;
+    margin-bottom: 30px;
 }
 
-/* Ajuste para justificar o texto na seção "Sobre" */
 #sobre p {
-    text-align: justify; /* Justifica o texto */
-    text-justify: inter-word; /* Melhora a quebra de palavras para justificação */
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 
-/* Estilo dos cards de serviço: fundo branco, sombra e efeito de hover */
 .service-card {
-    background-color: #ffffff !important; /* Fundo branco forçado para evitar qualquer tom amarelado */
+    background-color: #ffffff !important;
     border-radius: 12px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Sombra mais pronunciada */
-    min-height: 320px; /* Garante altura mínima para alinhamento uniforme */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    min-height: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    justify-content: flex-start;
     text-align: center;
 }
 
 .service-card:hover {
-    background-color: var(--light-bg) !important; /* Fundo cinza muito claro no hover */
+    background-color: var(--light-bg) !important;
     transform: translateY(-7px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Sombra mais forte no hover para destaque */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Estilo para as imagens dos ícones dentro dos cards */
 .service-card .service-icon-img {
     margin-bottom: 20px;
-    /* Removido o filtro de sombra para as imagens dos cards, conforme sua solicitação */
 }
 
 .service-card h5 {
-    color: var(--secondary-color); /* Título do card em preto */
+    color: var(--secondary-color);
     margin-bottom: 15px;
 }
 
@@ -207,9 +189,9 @@ h3.text-secondary {
 }
 
 .service-card ul {
-    width: 100%; /* Garante que a lista ocupe toda a largura */
-    padding-left: 20px; /* Adiciona padding à lista */
-    text-align: left; /* Alinha o texto da lista à esquerda */
+    width: 100%;
+    padding-left: 20px;
+    text-align: left;
 }
 
 .service-card ul li {
@@ -218,47 +200,48 @@ h3.text-secondary {
     color: #555;
 }
 
-/* Estilo dos membros da equipe (Nossa Equipe) */
+
 .team-member {
     text-align: center;
     padding: 15px;
-    /* Adicionado display flex para controlar o alinhamento vertical */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: flex-start; /* Alinha ao topo */
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .team-member img {
-    width: 150px; /* Tamanho fixo da imagem */
-    height: 150px; /* Garante que a imagem seja um círculo perfeito */
-    object-fit: cover; /* Corta a imagem para preencher o círculo */
-    border: 3px solid var(--primary-color); /* Borda amarela nas fotos */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 15px; /* Adiciona espaço abaixo da imagem */
+    margin-bottom: 15px;
 }
 
 .team-member img:hover {
-    transform: scale(1.05); /* Leve zoom no hover */
-    box-shadow: 0 8鸣 20px rgba(0, 0, 0, 0.2); /* Sombra no hover */
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .team-member h5 {
-    margin-top: 0; /* Remove margem superior extra se o padding já cuidar */
+    margin-top: 0;
     margin-bottom: 5px;
-    color: var(--secondary-color); /* Nome em preto */
+    color: var(--secondary-color);
 }
 
 .team-member p {
-    color: #6c757d; /* Função em cinza suave */
+    color: #6c757d;
     font-size: 0.9em;
-    margin-bottom: 0; /* Remove margem inferior para evitar espaçamento indesejado */
+    margin-bottom: 0;
 }
 
-/* Estilo para a seção de depoimentos */
+
 .testimonial-card {
-    background-color: #ffffff; /* Fundo branco para os cards de depoimento */
-    border: 1px solid #e0e0e0; /* Borda suave */
+    background-color: #ffffff !important;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -278,14 +261,14 @@ h3.text-secondary {
 }
 
 .testimonial-card .text-warning {
-    color: var(--primary-color) !important; /* Garante que as estrelas sejam amarelas */
+    color: var(--primary-color) !important;
 }
 
-/* Estilo do container do mapa (para o iframe do Google Maps) */
+
 .mapa-responsive {
     overflow: hidden;
     position: relative;
-    height: auto; /* Ajuste para não usar padding-bottom como proporção */
+    height: auto;
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
@@ -295,10 +278,9 @@ h3.text-secondary {
     top: 0;
     left: 0;
     width: 100%;
-    /* A altura do iframe é definida no HTML como 350px */
 }
 
-/* Estilo do formulário de contato */
+
 #contactForm {
     background-color: #fff;
     padding: 40px;
@@ -316,16 +298,16 @@ h3.text-secondary {
 
 #contactForm input:focus,
 #contactForm textarea:focus {
-    border-color: var(--primary-color); /* Borda amarela no foco */
-    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25); /* Sombra de foco com cor primária (amarelo) */
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
 }
 
-/* Estilo para a mensagem de sucesso/erro do formulário */
+
 #formMessage {
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 8px;
-    display: none; /* Escondido por padrão */
+    display: none;
     font-weight: 600;
 }
 
@@ -338,36 +320,40 @@ h3.text-secondary {
 #formMessage.error {
     background-color: #f8d7da;
     color: #721c24;
-    border: 1px solid #f5c6cb;
+    border: 1px solid #f5c6fb;
 }
 
-/* Estilo das informações de contato rápidas (ao lado do mapa) */
+
 .quick-contact-info {
-    /* Já estilizado com bg-white, text-dark, p-4, rounded-3, shadow no HTML */
-    min-height: 350px; /* Define a altura mínima para igualar a altura do mapa */
-    display: flex; /* Adicionado para que o conteúdo preença a altura */
-    flex-direction: column; /* Conteúdo em coluna para flexbox */
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    color: var(--text-color);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .quick-contact-info h4 {
-    border-bottom: 2px solid var(--primary-color); /* Linha amarela sob o título */
+    border-bottom: 2px solid var(--primary-color);
     padding-bottom: 10px;
     margin-bottom: 25px;
 }
 
 .quick-contact-info ul li {
-    margin-bottom: 20px; /* Espaçamento entre os itens de contato */
+    margin-bottom: 20px;
 }
 
 .quick-contact-info ul li i {
-    color: var(--primary-color); /* Ícones de contato em amarelo */
-    min-width: 30px; /* Garante que os ícones tenham espaço suficiente */
+    color: var(--primary-color);
+    min-width: 30px;
 }
 
 .quick-contact-info ul li h6 {
     font-size: 1.1em;
-    color: var(--secondary-color); /* Títulos das infos em preto */
+    color: var(--secondary-color);
 }
 
 .quick-contact-info ul li p {
@@ -377,109 +363,149 @@ h3.text-secondary {
 }
 
 .quick-contact-info ul li a {
-    color: #555; /* Cor do link para email/whatsapp na info de contato */
+    color: #555;
     transition: color 0.3s ease;
 }
 
 .quick-contact-info ul li a:hover {
-    color: var(--primary-color); /* Amarelo no hover */
+    color: var(--primary-color);
 }
 
-/* Estilo para o ícone de relógio na seção de localização (Aumentado) */
 .quick-contact-info ul li .fa-clock {
-    font-size: 2.5em !important; /* Aumenta o tamanho do ícone do relógio */
-    align-self: center; /* Alinha o ícone no centro da linha */
-    min-width: 40px; /* Garante espaço para o ícone maior */
+    font-size: 2.5em !important;
+    align-self: center;
+    min-width: 40px;
 }
 
-/* Footer - Rodapé da página com ícones sociais */
+
 footer {
-    background-color: var(--dark-bg); /* Fundo preto */
-    color: #fff;
+    background-color: var(--dark-bg); /* Fundo do rodapé */
+    color: var(--text-color); /* Texto padrão do rodapé */
     font-size: 0.9em;
     padding: 30px 0;
 }
 
-footer a {
+/* Estilos para o novo layout do rodapé */
+footer h5 {
+    color: var(--primary-color) !important; /* Títulos do rodapé em amarelo */
+    margin-bottom: 15px;
+}
+
+footer .footer-list li {
+    margin-bottom: 8px;
+    color: #fff; /* Força a cor branca para o texto da lista */
+}
+
+footer .footer-list li i {
+    color: var(--primary-color); /* Ícones da lista do rodapé em amarelo */
+    min-width: 25px; /* Garante alinhamento dos ícones */
+}
+
+footer .footer-list li a {
+    color: #fff; /* Força a cor branca para os links da lista */
+}
+
+footer .footer-list li a:hover {
+    color: var(--primary-color); /* Links da lista em amarelo no hover */
+}
+
+footer .footer-newsletter-form .form-control {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo sutil para o input */
+    border-color: rgba(255, 255, 255, 0.2);
     color: #fff;
-    transition: color 0.3s ease;
 }
 
-footer a:hover {
-    color: var(--primary-color); /* Ícones sociais em amarelo no hover */
+footer .footer-newsletter-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
-/* Estilo para o botão flutuante do WhatsApp */
+footer .footer-newsletter-form .btn {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+footer .footer-social-icon {
+    font-size: 1.5em;
+    margin: 0 8px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+footer .footer-social-icon:hover {
+    color: var(--primary-color) !important;
+    transform: scale(1.1);
+}
+
+
 .whatsapp-float {
-    position: fixed; /* Fixa o botão na tela */
-    bottom: 20px; /* 20px do rodapé */
-    right: 20px; /* 20px da direita */
-    background-color: #25D366; /* Cor verde do WhatsApp */
-    color: white; /* Cor do ícone branco */
-    width: 60px; /* Largura do botão */
-    height: 60px; /* Altura do botão */
-    border-radius: 50%; /* Torna o botão circular */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     text-align: center;
     font-size: 28px;
-    line-height: 60px; /* Centraliza o ícone verticalmente */
-    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    animation: pulse 2s infinite; /* Aplica a animação de pulso */
-    display: flex; /* Usar flexbox para centralizar o ícone */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    line-height: 60px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .whatsapp-float:hover {
-    transform: scale(1.1); /* Aumenta um pouco o botão no hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa no hover */
-    color: white; /* Garante que a cor do ícone não mude no hover */
-    animation: none; /* Remove a animação de pulso no hover */
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    color: white;
+    animation: none;
 }
 
 .whatsapp-float i {
-    color: white; /* Garante que o ícone interno seja branco */
+    color: white;
 }
 
-/* Estilo para o botão flutuante do Analisador de Sintomas */
+
 .symptom-analyzer-float {
-    position: fixed; /* Fixa o botão na tela */
-    bottom: 20px; /* 20px do rodapé */
-    left: 20px; /* 20px da esquerda (oposto ao WhatsApp) */
-    background-color: var(--primary-color); /* Cor amarela */
-    color: var(--secondary-color); /* Texto/ícone preto */
-    width: 60px; /* Largura do botão */
-    height: 60px; /* Altura do botão */
-    border-radius: 50%; /* Torna o botão circular */
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     text-align: center;
     font-size: 28px;
-    line-height: 60px; /* Centraliza o ícone verticalmente */
-    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    animation: pulse-yellow 2s infinite; /* Aplica a animação de pulso amarela */
-    display: flex; /* Usar flexbox para centralizar o ícone */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    border: none; /* Remove a borda padrão do botão */
-    cursor: pointer; /* Indica que é clicável */
+    line-height: 60px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: pulse-yellow 2s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
 }
 
 .symptom-analyzer-float:hover {
-    transform: scale(1.1); /* Aumenta um pouco o botão no hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa no hover */
-    animation: none; /* Remove a animação de pulso no hover */
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    animation: none;
 }
 
 .symptom-analyzer-float i {
-    color: var(--secondary-color); /* Garante que o ícone interno seja preto */
+    color: var(--secondary-color);
 }
 
 
-/* Animação de pulso (Keyframes) */
 @keyframes pulse {
     0% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); /* Sombra verde */
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
     }
     70% {
         transform: scale(1.05);
@@ -491,11 +517,10 @@ footer a:hover {
     }
 }
 
-/* Nova animação de pulso para o botão amarelo */
 @keyframes pulse-yellow {
     0% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); /* Sombra amarela */
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7);
     }
     70% {
         transform: scale(1.05);
@@ -507,7 +532,7 @@ footer a:hover {
     }
 }
 
-/* Estilos para os cards de redes sociais */
+
 .social-card {
     background-color: #ffffff !important;
     border-radius: 12px;
@@ -516,11 +541,11 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Alinha o conteúdo ao topo para evitar cortes */
+    justify-content: flex-start;
     text-align: center;
-    overflow: hidden; /* Garante que qualquer conteúdo que excede o card seja cortado */
-    height: auto; /* Permite que o card cresça conforme o conteúdo */
-    padding-bottom: 20px; /* Adiciona um padding na parte inferior do card */
+    overflow: hidden;
+    height: auto;
+    padding-bottom: 20px;
 }
 
 .social-card:hover {
@@ -530,56 +555,78 @@ footer a:hover {
 }
 
 .social-card i {
-    color: var(--primary-color); /* Ícones sociais em amarelo */
+    color: var(--primary-color);
 }
 
 .social-card .btn {
-    margin-top: 15px; /* Ajusta a margem superior do botão dentro do card */
-    margin-bottom: 0; /* Garante que não haja margem extra abaixo do botão */
+    margin-top: 15px;
+    margin-bottom: 0;
 }
 
 .instagram-embed-placeholder,
 .facebook-embed-placeholder,
 .tiktok-embed-placeholder {
     width: 100%;
-    margin: 15px auto 0 auto;
+    margin: 15px auto;
     background-color: var(--light-bg);
     padding: 10px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: auto; /* Permite que o placeholder se ajuste ao conteúdo */
+    height: auto;
     justify-content: center;
-    overflow-y: auto; /* Permite rolagem vertical se o conteúdo for maior que o placeholder */
-    /* Removido min-height */
+    overflow-y: auto;
 }
 
 .instagram-embed-placeholder img,
 .facebook-embed-placeholder img,
 .tiktok-embed-placeholder img {
     width: 100%;
-    height: auto; /* Permite que a imagem se ajuste à altura do conteúdo */
-    object-fit: contain; /* Ajusta a imagem para caber sem cortar */
+    height: auto;
+    object-fit: contain;
     border-radius: 4px;
 }
 
 
-/* Media queries para responsividade, ajustando elementos em telas menores */
+@media (min-width: 992px) { /* Apenas para telas grandes (lg e acima) */
+    #nossa-proposta .row {
+        align-items: flex-start; /* Alinha o conteúdo das colunas verticalmente no topo */
+    }
+    #nossa-proposta .offer-list {
+        text-align: justify; /* Justifica o texto da lista */
+        font-size: 1.1em; /* Aumenta o tamanho da fonte da lista */
+        padding-right: 20px; /* Adiciona padding à direita para dar espaço ao boneco */
+    }
+    #nossa-proposta .offer-list li {
+        margin-bottom: 0.8em; /* Reduz o espaçamento entre os itens da lista */
+    }
+    #nossa-proposta .lead {
+        margin-top: 25px; /* Reduz a margem superior do parágrafo final */
+    }
+    .mascote-proposta { /* Apenas o mascote */
+        max-width: 100%; /* Permite que o boneco use toda a largura da coluna */
+        height: auto; /* Garante que a altura se ajuste */
+        margin-left: 0; /* Alinha à esquerda da coluna */
+        margin-right: auto; /* Empurra para a direita */
+    }
+}
+
+
 @media (max-width: 991px) { /* Para telas menores que large (col-lg-X) */
     .contact-info,
-    .quick-contact-info, /* Ajuste para a nova classe */
+    .quick-contact-info,
     #contactForm {
-        height: auto !important; /* Remove height:100% em telas menores para evitar problemas */
-        min-height: auto !important; /* Remove min-height fixo em telas menores */
+        height: auto !important;
+        min-height: auto !important;
     }
 
     .quick-contact-info h4 {
-        text-align: center; /* Centraliza o título das informações de contato rápidas em mobile */
+        text-align: center;
     }
 
     .whatsapp-float,
-    .symptom-analyzer-float { /* Aplica o mesmo tamanho em mobile para ambos os botões */
+    .symptom-analyzer-float {
         width: 50px;
         height: 50px;
         font-size: 24px;
@@ -592,11 +639,18 @@ footer a:hover {
     .symptom-analyzer-float {
         left: 15px;
     }
+
+    #nossa-proposta .mascote-proposta {
+        max-width: 60%; /* Ajusta o tamanho do boneco quando empilhado em mobile */
+        margin-top: 30px; /* Adiciona uma margem superior quando empilhado */
+        margin-left: auto; /* Centraliza quando empilhado */
+        margin-right: auto; /* Centraliza quando empilhado */
+    }
 }
 
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.5em; /* Reduz o tamanho do título em telas menores */
+        font-size: 2.5em;
     }
 
     .hero p.lead {
@@ -613,11 +667,11 @@ footer a:hover {
     }
 
     h3.text-secondary {
-        font-size: 1.5em; /* Ajusta o tamanho do título da equipe em telas menores */
+        font-size: 1.5em;
     }
 
     .service-card {
-        min-height: auto; /* Remove altura mínima em mobile para melhor adaptação */
+        min-height: auto;
     }
 
     .service-card ul {
@@ -626,26 +680,26 @@ footer a:hover {
     }
 
     .service-card ul li {
-        text-align: left; /* Garante alinhamento à esquerda para as listas de serviços */
+        text-align: left;
         padding-left: 10px;
     }
 
     .team-member img {
-        width: 120px; /* Ajusta o tamanho das imagens da equipe em mobile */
+        width: 120px;
         height: 120px;
     }
 
     .social-card .instagram-embed-placeholder,
     .social-card .facebook-embed-placeholder,
     .social-card .tiktok-embed-placeholder {
-        height: auto; /* Deixa a altura ser determinada pelo conteúdo */
-        min-height: 80px; /* Reduzi o min-height para ainda mais flexibilidade */
+        height: auto;
+        min-height: 80px;
     }
 }
 
 @media (max-width: 576px) {
     .navbar-brand img {
-        height: 40px; /* Reduz o logo em telas muito pequenas */
+        height: 40px;
     }
 
     .hero h1 {
