@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lutron | Links Úteis</title>
+    <!-- Tailwind CSS CDN para estilização rápida e responsividade -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #212529; /* Cor de fundo escura (preto/cinza escuro) */
+            color: #f8f9fa; /* Cor do texto clara */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .linktree-container {
+            max-width: 450px;
+            width: 100%;
+            background-color: #343a40; /* Fundo mais claro para o container */
+            border-radius: 1.5rem; /* rounded-xl */
+            padding: 2.5rem; /* p-10 */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #FFC107; /* Borda amarela */
+            object-fit: cover;
+            margin: 0 auto 1.5rem auto; /* Centraliza e adiciona margem inferior */
+        }
+        .link-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background-color: #FFC107; /* Botão amarelo */
+            color: #212529; /* Texto do botão em preto */
+            font-weight: 700; /* bold */
+            border-radius: 0.75rem; /* rounded-lg */
+            margin-bottom: 1rem;
+            text-decoration: none;
+            transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .link-button:hover {
+            background-color: #e0ac00; /* Amarelo um pouco mais escuro no hover */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        .link-button i {
+            margin-right: 0.75rem; /* Espaço entre o ícone e o texto */
+            font-size: 1.25rem; /* text-xl */
+        }
+        .social-icons-footer {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem; /* Espaçamento entre os ícones */
+        }
+        .social-icons-footer a {
+            color: #f8f9fa; /* Ícones sociais brancos */
+            font-size: 1.75rem; /* text-3xl */
+            transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+        }
+        .social-icons-footer a:hover {
+            color: #FFC107; /* Ícones amarelos no hover */
+            transform: translateY(-2px);
+        }
+        .credits {
+            margin-top: 2rem;
+            font-size: 0.875rem; /* text-sm */
+            color: #adb5bd; /* Texto cinza claro */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 flex items-center justify-center min-h-screen p-5">
+
+    <div class="linktree-container bg-gray-800 rounded-3xl p-10 shadow-xl">
+        <!-- Foto de Perfil da Lutron -->
+        <img src="img/cleiton.png" alt="Lutron Logo" class="profile-pic">
+        <h1 class="text-3xl font-bold mb-4 text-white">Oficina Lutron</h1>
+        <p class="text-gray-300 mb-8">Especialistas em Direção Veicular - Nova Iguaçu/RJ</p>
+
+        <!-- Botões de Links -->
+        <div class="space-y-4">
+            <a href="https://SEU_SITE_PRINCIPAL.com.br" target="_blank" rel="noopener noreferrer" class="link-button">
+                <i class="fas fa-globe"></i> Visitar Nosso Site
+            </a>
+            <a href="https://www.tiktok.com/@lutron.direes" target="_blank" rel="noopener noreferrer" class="link-button">
+                <i class="fab fa-tiktok"></i> Nosso TikTok
+            </a>
+            <a href="https://lista.mercadolivre.com.br/SEU_MERCADO_LIVRE" target="_blank" rel="noopener noreferrer" class="link-button">
+                <i class="fas fa-store"></i> Produtos no Mercado Livre
+            </a>
+            <a href="https://wa.me/5521964349438?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Oficina%20Lutron!" target="_blank" rel="noopener noreferrer" class="link-button">
+                <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+            </a>
+        </div>
+
+        <!-- Ícones de Redes Sociais (se houver mais, adicione aqui) -->
+        <div class="social-icons-footer mt-8">
+            <a href="https://www.instagram.com/SEU_INSTAGRAM/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Lutron">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/SEU_FACEBOOK/" target="_blank" rel="noopener noreferrer" aria-label="Facebook da Lutron">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <!-- Adicione outros ícones sociais aqui se necessário -->
+        </div>
+
+        <!-- Crétidos e Informações Legais -->
+        <div class="credits mt-8 text-sm text-gray-400">
+            <p>CNPJ: 59.998.150/0001-89</p>
+            <p>Estrada Deputado Darcílio Ayres Raunheitti, 463</p>
+            <p>&copy; 2025 Oficina Lutron. Todos os direitos reservados.</p>
+        
+        </div>
+    </div>
+
+</body>
+</html>
