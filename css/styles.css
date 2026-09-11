@@ -131,7 +131,7 @@ p{ margin: 0; }
 }
 
 .brand{ display: flex; align-items: center; gap: 10px; }
-.brand-mark{ width: 34px; height: 34px; color: var(--accent); flex-shrink: 0; }
+.brand-mark{ width: 34px; height: 34px; object-fit: contain; flex-shrink: 0; }
 .brand-text{ display: flex; flex-direction: column; line-height: 1; font-family: var(--font-head); color: #fff; }
 .brand-text strong{ font-size: 1.05rem; font-weight: 800; letter-spacing: 0.03em; }
 .brand-text span{ font-size: 0.62rem; font-weight: 600; letter-spacing: 0.18em; color: var(--accent-2); margin-top: 3px; }
