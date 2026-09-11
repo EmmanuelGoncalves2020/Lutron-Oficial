@@ -3,13 +3,14 @@
    ============================================================ */
 
 :root{
-  /* paleta: preto / grafite / cinza / branco + azul de destaque */
-  --ink: #0B0D10;
-  --graphite: #12151A;
-  --charcoal: #1B1F26;
-  --line-dark: #262B33;
-  --mist: #97A0AD;
-  --mist-strong: #C3C9D2;
+  /* paleta: grafite azulado / cinza / branco + ciano de destaque
+     (alinhada à identidade real já usada no Instagram da Lutron: navy escuro + ciano) */
+  --ink: #070D16;
+  --graphite: #0E1622;
+  --charcoal: #172232;
+  --line-dark: #223142;
+  --mist: #93A4B8;
+  --mist-strong: #C7D6E5;
 
   --paper: #F5F6F8;
   --paper-2: #EBEDF0;
@@ -17,9 +18,9 @@
   --title: #10131A;
   --line-light: #E2E5EA;
 
-  --accent: #2F6BFF;
-  --accent-2: #6C9BFF;
-  --accent-deep: #1B4FDB;
+  --accent: #22B4E3;
+  --accent-2: #6FDDFF;
+  --accent-deep: #0E86AE;
   --whatsapp: #25D366;
   --whatsapp-deep: #1DA851;
 
@@ -96,9 +97,9 @@ p{ margin: 0; }
 .btn-primary{
   background: var(--accent);
   color: #fff;
-  box-shadow: 0 10px 24px -8px rgba(47,107,255,.55);
+  box-shadow: 0 10px 24px -8px rgba(34,180,227,.55);
 }
-.btn-primary:hover{ background: var(--accent-deep); box-shadow: 0 14px 30px -8px rgba(47,107,255,.65); }
+.btn-primary:hover{ background: var(--accent-deep); box-shadow: 0 14px 30px -8px rgba(34,180,227,.65); }
 
 .btn-whatsapp{
   background: var(--whatsapp);
@@ -117,7 +118,7 @@ p{ margin: 0; }
   transition: background .3s var(--ease), padding .3s var(--ease), box-shadow .3s var(--ease);
 }
 .site-header.scrolled{
-  background: rgba(11,13,16,.88);
+  background: rgba(7,13,22,.88);
   backdrop-filter: blur(10px);
   padding: 12px 0;
   box-shadow: 0 8px 30px -12px rgba(0,0,0,.5);
@@ -195,8 +196,8 @@ p{ margin: 0; }
 .hero-scrim{
   position: absolute; inset: 0;
   background:
-    linear-gradient(100deg, rgba(6,8,11,.97) 20%, rgba(6,8,11,.75) 46%, rgba(11,13,16,.35) 72%),
-    linear-gradient(0deg, rgba(6,8,11,.9), transparent 40%);
+    linear-gradient(100deg, rgba(5,10,17,.97) 20%, rgba(5,10,17,.75) 46%, rgba(7,13,22,.35) 72%),
+    linear-gradient(0deg, rgba(5,10,17,.9), transparent 40%);
 }
 .hero-grid{
   position: absolute; inset: 0;
@@ -335,7 +336,7 @@ p{ margin: 0; }
   width: 58px; height: 58px;
   border-radius: 14px;
   display: flex; align-items: center; justify-content: center;
-  background: linear-gradient(155deg, rgba(47,107,255,.12), rgba(47,107,255,.04));
+  background: linear-gradient(155deg, rgba(34,180,227,.12), rgba(34,180,227,.04));
   color: var(--accent);
   margin-bottom: 24px;
 }
@@ -435,7 +436,7 @@ p{ margin: 0; }
   top: -40%; left: 50%;
   width: 900px; height: 900px;
   transform: translateX(-50%);
-  background: radial-gradient(circle, rgba(47,107,255,.16), transparent 65%);
+  background: radial-gradient(circle, rgba(34,180,227,.16), transparent 65%);
 }
 .manifesto-content{ position: relative; max-width: 720px; }
 .manifesto-content h2{
@@ -547,7 +548,7 @@ p{ margin: 0; }
     flex-direction: column;
     position: absolute;
     top: 100%; left: 0; right: 0;
-    background: rgba(11,13,16,.98);
+    background: rgba(7,13,22,.98);
     backdrop-filter: blur(10px);
     padding: 20px 24px 28px;
     gap: 6px;
