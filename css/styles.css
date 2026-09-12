@@ -109,6 +109,55 @@ p{ margin: 0; }
 
 .btn-sm{ padding: 10px 18px; font-size: 0.85rem; }
 
+/* ---------- preloader ---------- */
+html.is-loading, html.is-loading body{ overflow: hidden; height: 100%; }
+#preloader{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  background: var(--ink);
+  transition: opacity .5s var(--ease), visibility .5s var(--ease);
+}
+#preloader.is-hidden{ opacity: 0; visibility: hidden; pointer-events: none; }
+.preloader-logo{
+  width: 56px;
+  height: 56px;
+  animation: preloader-pulse 1.6s ease-in-out infinite;
+}
+.preloader-track{
+  width: 160px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--line-dark);
+  overflow: hidden;
+}
+.preloader-fill{
+  height: 100%;
+  width: 0%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+.preloader-pct{
+  font-family: var(--font-head);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--mist);
+  font-variant-numeric: tabular-nums;
+}
+@keyframes preloader-pulse{
+  0%, 100%{ transform: scale(1); opacity: 1; }
+  50%{ transform: scale(1.07); opacity: .8; }
+}
+@media (prefers-reduced-motion: reduce){
+  .preloader-logo{ animation: none; }
+}
+
 /* ---------- header ---------- */
 .site-header{
   position: fixed;
@@ -589,6 +638,15 @@ p{ margin: 0; }
   .hero-content{ padding-top: 110px; padding-bottom: 70px; }
   .hero-ctas .btn{ width: 100%; justify-content: center; }
   .hero-ctas{ flex-direction: column; }
+  .hero-media{ filter: grayscale(.3) contrast(1.05) brightness(.75); }
+  .hero-scrim{
+    background:
+      linear-gradient(180deg, rgba(5,10,17,.9) 0%, rgba(5,10,17,.82) 45%, rgba(5,10,17,.94) 100%),
+      linear-gradient(100deg, rgba(5,10,17,.85) 30%, rgba(5,10,17,.55) 100%);
+  }
+  .hero-grid{ opacity: .3; }
+  .eyebrow{ font-size: .7rem; letter-spacing: .12em; }
+  .hero-text{ font-size: 1rem; }
   .section{ padding: 76px 0; }
   .positioning{ padding: 76px 0; }
   .manifesto{ padding: 90px 0; }

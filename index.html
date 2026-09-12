@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="is-loading">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,6 +23,56 @@
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+<div id="preloader" role="status" aria-label="Carregando o site">
+  <img class="preloader-logo" src="img/logo-lutron.png" alt="" />
+  <div class="preloader-track"><div class="preloader-fill" id="preloaderFill"></div></div>
+  <span class="preloader-pct" id="preloaderPct">0%</span>
+</div>
+<script>
+(function(){
+  var html = document.documentElement;
+  var pre = document.getElementById('preloader');
+  var fill = document.getElementById('preloaderFill');
+  var pct = document.getElementById('preloaderPct');
+  if(!pre || !fill || !pct){ html.classList.remove('is-loading'); return; }
+
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var loaded = false;
+  var shown = 0;
+
+  window.addEventListener('load', function(){ loaded = true; });
+  setTimeout(function(){ loaded = true; }, 4000);
+
+  function finish(){
+    html.classList.remove('is-loading');
+    pre.classList.add('is-hidden');
+    setTimeout(function(){ if(pre.parentNode) pre.parentNode.removeChild(pre); }, 550);
+  }
+
+  if(reduceMotion){
+    window.addEventListener('load', finish);
+    setTimeout(finish, 800);
+    return;
+  }
+
+  function tick(){
+    var target = loaded ? 100 : 92;
+    shown += (target - shown) * 0.12 + (loaded ? 3 : 0.6);
+    if(shown >= 100){
+      fill.style.width = '100%';
+      pct.textContent = '100%';
+      finish();
+      return;
+    }
+    var display = Math.round(shown);
+    fill.style.width = display + '%';
+    pct.textContent = display + '%';
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+</script>
 
 <!-- Sprite de ícones SVG reutilizáveis -->
 <svg class="icon-defs" aria-hidden="true">
