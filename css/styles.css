@@ -646,7 +646,8 @@ html.is-loading, html.is-loading body{ overflow: hidden; height: 100%; }
   }
   .hero-grid{ opacity: .3; }
   .eyebrow{ font-size: .7rem; letter-spacing: .12em; }
-  .hero-text{ font-size: 1rem; }
+  .hero-slogan, .hero-text{ display: none; }
+  .hero-title{ margin-bottom: 32px; }
   .section{ padding: 76px 0; }
   .positioning{ padding: 76px 0; }
   .manifesto{ padding: 90px 0; }
