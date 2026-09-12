@@ -1,548 +1,395 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Meta description para SEO e melhor visibilidade nos motores de busca -->
-    <meta name="description" content="Oficina Lutron - Especialistas em direção veicular em Nova Iguaçu/RJ. Reparo, diagnóstico e manutenção preventiva de sistemas de direção hidráulica e elétrica." />
-    <title>Oficina Lutron | Especialistas em Direção</title>
-    <!-- Link para o Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <!-- Link para a biblioteca de ícones Font Awesome (para ícones vetoriais mais modernos) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Link para o Google Fonts (fonte 'Open Sans' para um visual mais moderno e legível) -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Link para o seu arquivo de estilos personalizado -->
-    <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lutron Direções | Especialistas em Sistemas de Direção</title>
+<meta name="description" content="Lutron Direções: especialistas em direção hidráulica, elétrica e eletro-hidráulica. Diagnóstico preciso, transparência e segurança para o seu veículo." />
+<meta name="theme-color" content="#070D16" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Lutron Direções | Especialistas em Sistemas de Direção" />
+<meta property="og:description" content="Diagnóstico preciso, transparência e segurança em sistemas de direção hidráulica, elétrica e eletro-hidráulica." />
+<meta property="og:image" content="img/Banner.jpg" />
+<meta property="og:locale" content="pt_BR" />
+
+<link rel="icon" type="image/png" href="img/logo-lutron.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70">
+<body>
 
-    <!-- Navbar fixa e responsiva -->
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
-        <div class="container">
-            <!-- Brand com o logo da Lutron -->
-            <a class="navbar-brand" href="#">
-                <!-- Usando um placeholder para o logo. Substitua por seu img/logo.png real. -->
-                <img src="img/logo.png" alt="Lutron Logo" height="50">
-            </a>
-            <!-- Botão do menu sanduíche para mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Conteúdo da barra de navegação -->
-            <div class="collapse navbar-collapse" id="navContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#inicio">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#localizacao">Localização</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#redes-sociais">Redes Sociais</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<!-- Sprite de ícones SVG reutilizáveis -->
+<svg class="icon-defs" aria-hidden="true">
+<defs>
+  <symbol id="ic-drop" viewBox="0 0 24 24"><path d="M12 3.5c2.6 3.7 6.2 8 6.2 11.6a6.2 6.2 0 1 1-12.4 0c0-3.6 3.6-7.9 6.2-11.6Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-bolt" viewBox="0 0 24 24"><path d="M12.8 3 6.5 13.2h4.3L10 21l7.5-11.2h-4.6L12.8 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-hybrid" viewBox="0 0 24 24"><path d="M9 3.5c2 2.8 4.8 6 4.8 8.8a4.8 4.8 0 1 1-9.6 0c0-2.8 2.8-6 4.8-8.8Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M16.6 9.2 13 15.6h3.1l-1.6 5.2 5.5-8.2h-3.3l1-3.4Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.6 15.6 20 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="ic-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="0.9" fill="currentColor"/></symbol>
+  <symbol id="ic-chat" viewBox="0 0 24 24"><path d="M4 5.5h16v10H12.5L8 19v-3.5H4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-shield" viewBox="0 0 24 24"><path d="M12 3.5 19 6.2v5.6c0 4.7-3 7.9-7 8.7-4-.8-7-4-7-8.7V6.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.7 12l2.4 2.4 4.2-4.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-heart" viewBox="0 0 24 24"><path d="M12 20s-7.6-4.5-9.4-9.3C1.4 7.2 3.6 4.3 6.7 4.3c2 0 3.6 1.1 4.3 2.7.7-1.6 2.3-2.7 4.3-2.7 3.1 0 5.3 2.9 4.1 6.4C19.6 15.5 12 20 12 20Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-scale" viewBox="0 0 24 24"><path d="M12 3.5v17M6 8h12M6 8l-3 6.2a3.3 3.3 0 0 0 6 0L6 8Zm12 0-3 6.2a3.3 3.3 0 0 0 6 0L18 8ZM8.7 20.5h6.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+  <symbol id="ic-link" viewBox="0 0 24 24"><path d="M9.5 14.5 14.5 9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M11 6.7l1.6-1.6a3.6 3.6 0 0 1 5.1 5.1L16 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M13 17.3l-1.6 1.6a3.6 3.6 0 0 1-5.1-5.1L8 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="ic-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.8 12 5.8 21.5 12 21.5 12 18 18.2 12 18.2 2.5 12 2.5 12Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="12" r="2.7" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24"><path d="M4.5 12.8 9 17.3 19.5 6.7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-pin" viewBox="0 0 24 24"><path d="M12 21.5S5 14.9 5 9.9a7 7 0 1 1 14 0c0 5-7 11.6-7 11.6Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9.7" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7.5V12l3.4 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+  <symbol id="ic-phone" viewBox="0 0 24 24"><path d="M7 3.5 4.5 6c-.6 3.4 2 8.6 5.3 11.9 3.3 3.3 8.5 5.9 11.9 5.3l2.5-2.5-4.4-4.4-2.3 1.4c-1.8-.9-3.4-2.1-4.9-3.6-1.5-1.5-2.7-3.1-3.6-4.9l1.4-2.3L7 3.5Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" transform="scale(0.84) translate(2 2)"/></symbol>
+  <symbol id="ic-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 6.7 12 12.5l7.5-5.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24"><path d="M5 12h13.5M13 6.5 18.5 12 13 17.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-whatsapp" viewBox="0 0 32 32"><path fill="currentColor" d="M16.02 3C9.1 3 3.5 8.6 3.5 15.52c0 2.6.75 5.02 2.08 7.06L4 29l6.62-1.74a12.4 12.4 0 0 0 5.4 1.24h.01c6.92 0 12.52-5.6 12.52-12.52C28.55 8.6 22.95 3 16.02 3Zm0 22.9h-.01a10.3 10.3 0 0 1-5.26-1.44l-.38-.22-3.93 1.03 1.05-3.83-.25-.4a10.28 10.28 0 0 1-1.58-5.5c0-5.7 4.64-10.34 10.36-10.34 2.77 0 5.37 1.08 7.32 3.04a10.27 10.27 0 0 1 3.04 7.32c0 5.71-4.65 10.34-10.36 10.34Zm5.68-7.74c-.31-.16-1.84-.9-2.12-1.01-.28-.1-.49-.16-.7.16-.2.31-.8 1.01-.98 1.22-.18.2-.36.22-.67.08-.31-.16-1.3-.48-2.47-1.53-.91-.81-1.53-1.82-1.7-2.13-.18-.31-.02-.48.15-.65.16-.16.36-.42.54-.63.18-.2.24-.35.36-.58.12-.24.06-.44-.04-.6-.1-.16-.66-1.58-.9-2.16-.24-.57-.49-.5-.68-.5-.18 0-.4-.02-.6-.02-.2 0-.54.08-.82.4-.28.31-1.07 1.05-1.07 2.55 0 1.51 1.1 2.96 1.25 3.17.16.2 2.14 3.27 5.28 4.45 3.14 1.17 3.14.78 3.71.73.57-.06 1.84-.75 2.1-1.48.26-.73.26-1.35.18-1.48-.08-.14-.29-.22-.6-.38Z"/></symbol>
+  <symbol id="ic-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="ic-facebook" viewBox="0 0 24 24"><path d="M14.5 21v-7h2.4l.4-3H14.5V9c0-.9.3-1.6 1.7-1.6h1.4V4.7c-.7-.1-1.6-.2-2.5-.2-2.6 0-4.3 1.5-4.3 4.4V11H8.5v3H10.8v7Z" fill="currentColor"/></symbol>
+  <symbol id="ic-tiktok" viewBox="0 0 24 24"><path d="M14.5 3.5c.4 2 1.9 3.5 4 3.8v2.6c-1.4 0-2.8-.4-4-1.2v5.8a4.9 4.9 0 1 1-4-4.8v2.7a2.2 2.2 0 1 0 1.5 2.1V3.5Z" fill="currentColor"/></symbol>
+  <symbol id="ic-store" viewBox="0 0 24 24"><path d="M4 8.5 5.5 4h13L20 8.5M4 8.5v11h16v-11M4 8.5h16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.5 12v3h5v-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+</defs>
+</svg>
 
-     <!-- Hero Section - Seção principal com chamada para ação -->
-    <section id="inicio" class="hero d-flex align-items-center text-center text-white">
-        <div class="container">
-            <h1 class="display-4 fw-bold">Especialistas em Direção Veicular</h1>
-            <p class="lead mt-3">Com mais de 17 anos de experiência, oferecemos diagnóstico preciso e soluções completas para sistemas de direção hidráulica e elétrica.</p>
-            <!-- Botão principal em preto para contraste com o banner, seguindo a paleta preto/amarelo -->
-            <a href="#contato" class="btn btn-dark btn-lg mt-4" role="button" aria-label="Solicitar Atendimento">Solicitar Atendimento</a>
-        </div>
-    </section>
-
-    <!-- Sobre - Quem Somos -->
-    <section id="sobre" class="py-5 bg-light">
-        <div class="container text-center">
-            <h2 class="mb-4">Quem Somos</h2>
-            <p class="lead mx-auto" style="max-width: 800px;">
-                A <strong>Lutron Oficina Especializada em Direção</strong> nasceu para atender a crescente demanda por serviços técnicos de alta precisão na região metropolitana do Rio de Janeiro.
-            </p>
-            <p class="mx-auto" style="max-width: 800px;">
-                Localizada em Nova Iguaçu, somos referência em diagnóstico e reparo de sistemas de direção, com atendimento humanizado, peças de qualidade e garantia em todos os serviços.
-            </p>
-            <p class="mx-auto" style="max-width: 800px;">
-                Nosso diferencial está na <strong>experiência técnica, atendimento ágil</strong> e no compromisso com a <strong>segurança do seu veículo</strong>.
-            </p>
-
-            <h3 class="mt-5 mb-4 text-secondary">Nossa Equipe</h3>
-            <div class="row justify-content-center g-4">
-                <!-- Membro da Equipe 1 -->
-                <div class="col-6 col-md-3">
-                    <div class="team-member">
-                        <img src="img/cleiton.png" alt="Foto Membro da Equipe 1" class="img-fluid rounded-circle shadow mb-3">
-                        <h5 class="fw-bold text-secondary">Cleiton Erick</h5>
-                        <p class="text-muted">Proprietário Técnico de direção eletrica e hidráulica </p>
-                    </div>
-                </div>
-                <!-- Membro da Equipe 2 -->
-                <div class="col-6 col-md-3">
-                    <div class="team-member">
-                        <img src="img/duda.png" alt="Foto Membro da Equipe 2" class="img-fluid rounded-circle shadow mb-3">
-                        <h5 class="fw-bold text-secondary">Maria Medeiros</h5>
-                        <p class="text-muted">Gerente Administrativo</p>
-                    </div>
-                </div>
-                <!-- Membro da Equipe 3 (exemplo, adicione mais conforme necessário) -->
-                <div class="col-6 col-md-3">
-                    <div class="team-member">
-                        <img src="img/boneco1.png" alt="Foto Membro da Equipe 3" class="img-fluid rounded-circle shadow mb-3">
-                        <h5 class="fw-bold text-secondary">Elias</h5>
-                        <p class="text-muted">Mecânico</p>
-                    </div>
-                </div>
-                <!-- Membro da Equipe 4 (exemplo, adicione mais conforme necessário) -->
-                <div class="col-6 col-md-3">
-                    <div class="team-member">
-                        <img src="img/boneco 2.png" alt="Foto Membro da Equipe 4" class="img-fluid rounded-circle shadow mb-3">
-                        <h5 class="fw-bold text-secondary">João</h5>
-                        <p class="text-muted">Montador</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Serviços - Nossos Serviços -->
-    <section id="servicos" class="py-5 bg-light"> <!-- Fundo da seção em light (branco/cinza claro) -->
-        <div class="container text-center">
-            <h2 class="mb-5">Nossos Serviços</h2>
-            <div class="row g-4">
-
-                <!-- Card de Serviço: Reparo de Direção -->
-                <div class="col-md-4">
-                    <div class="card shadow-sm h-100 p-4 service-card"> <!-- Card branco por padrão -->
-                        <!-- Imagem do ícone para Reparo de Direção - substitua o src! -->
-                        <img src="img/steering_wheel_icon.png" alt="Ícone Reparo de Direção" class="mx-auto d-block mb-3 service-icon-img" width="80" height="80">
-                        <h5 class="fw-bold">Reparo de Direção</h5>
-                        <p>Manutenção e reparo completo de sistemas de direção hidráulica e elétrica.</p>
-                        <ul class="text-start small list-unstyled ps-0">
-                            <li><i class="fas fa-check-circle text-success me-2"></i>Troca de bomba de direção</li>
-                            <li><i class="fas fa-check-circle text-success me-2"></i>Reparo de caixa de direção</li>
-                            <li><i class="fas fa-check-circle text-success me-2"></i>Mangueiras e conexões</li>
-                            <li><i class="fas fa-check-circle text-success me-2"></i>Fluido de direção</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Card de Serviço: Diagnóstico Técnico -->
-                <div class="col-md-4">
-                    <div class="card shadow-sm h-100 p-4 service-card"> <!-- Card branco por padrão -->
-                        <!-- Imagem do ícone para Diagnóstico Técnico - substitua o src! -->
-                        <img src="img/wrench_icon.png" alt="Ícone Diagnóstico Técnico" class="mx-auto d-block mb-3 service-icon-img" width="80" height="80">
-                        <h5 class="fw-bold">Diagnóstico Técnico</h5>
-                        <p>Diagnóstico preciso com equipamentos modernos para identificar problemas.</p>
-                        <ul class="text-start small list-unstyled ps-0">
-                            <li><i class="fas fa-check-circle text-success me-2"></i>Scanner automotivo</li>
-                            <li><i class="fas fa-check-circle text-success me-2"></i>Teste de pressão</li>
-                            <li><i class="fas fa-check-circle text-success me-2"></i>Análise de ruídos</li>
-                            <li><i class="fas fa-check-circle text-success me-2"></i>Relatório detalhado</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Card de Serviço: Manutenção Preventiva -->
-                <div class="col-md-4">
-                    <div class="card shadow-sm h-100 p-4 service-card"> <!-- Card branco por padrão -->
-                        <!-- Imagem do ícone para Manutenção Preventiva - substitua o src! -->
-                        <img src="img/gear_icon.png" alt="Ícone Manutenção Preventiva" class="mx-auto d-block mb-3 service-icon-img" width="80" height="80">
-                        <h5 class="fw-bold">Manutenção Preventiva</h5>
-                        <p>Manutenção regular para evitar problemas e aumentar a vida útil.</p>
-                        <ul class="text-start small list-unstyled ps-0">
-                            <li><i class="fas fa-check-circle text-success me-2"></i>Revisão periódica</li>
-                            <li><i class="fas fa-check-circle text-success me-2"></i>Troca de filtros</li>
-                            <li><i class="fas fa-check-circle text-success me-2"></i>Lubrificação</li>
-                            <li><i class="fas fa-check-circle text-success me-2"></i>Ajustes e calibragem</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-            <!-- O botão Analisar Sintomas foi removido daqui, agora é um botão flutuante -->
-        </div>
-    </section>
-    <!-- Nossa Proposta / O que oferecemos -->
-    <section id="nossa-proposta" class="py-5 bg-dark text-white">
-        <div class="container">
-            <h2 class="mb-5 text-center">Na Oficina Lutron, oferecemos:</h2>
-            <div class="row justify-content-center align-items-center">
-                <!-- Coluna para o boneco (AGORA NO LADO ESQUERDO) -->
-                <div class="col-lg-5 text-center d-flex align-items-center justify-content-center order-lg-1"> <!-- Adicionado order-lg-1 para ordenar a coluna em telas grandes -->
-                    <!-- ATENÇÃO: Verifique se 'Boneco.png' está na pasta 'img/' -->
-                    <img src="img/Boneco.png" alt="Mascote Mecânico Lutron" class="img-fluid mascote-proposta">
-                </div>
-                <!-- Coluna para o texto (AGORA NO LADO DIREITO) -->
-                <div class="col-lg-7 order-lg-2"> <!-- Adicionado order-lg-2 para ordenar a coluna em telas grandes -->
-                    <ul class="offer-list list-unstyled">
-                        <li>
-                            <i class="fas fa-check-circle text-primary me-3"></i>
-                            Diagnóstico completo do sistema de direção hidráulica: Através de equipamentos modernos e da experiência de nossos profissionais, identificamos a causa do problema com precisão.
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle text-primary me-3"></i>
-                            Serviços especializados em direção hidráulica: Reparo ou troca de bombas hidráulicas, mangueiras, correias de transmissão e outros componentes do sistema.
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle text-primary me-3"></i>
-                            Utilização de peças de qualidade: Priorizamos o uso de peças originais ou de alta qualidade para garantir o bom funcionamento do sistema e a sua segurança.
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle text-primary me-3"></i>
-                            Atendimento personalizado: Oferecemos um atendimento personalizado para cada cliente, com explicações detalhadas sobre o problema e o serviço a ser realizado.
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle text-primary me-3"></i>
-                            Preço justo e competitivo: Acreditamos que acesso à qualidade deve ser acessível, por isso oferecemos preços justos e competitivos em todos os nossos serviços.
-                        </li>
-                    </ul>
-                    <p class="text-start mt-5 lead">
-                        Não deixe problemas na direção hidráulica colocarem em risco sua segurança e conforto ao dirigir!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Depoimentos no Google Meu Negócio -->
-    <section id="depoimentos" class="py-5 bg-white text-center">
-        <div class="container">
-            <h2 class="mb-4">Depoimentos no Google</h2>
-            <p class="lead mb-5">O que os clientes dizem da nossa empresa.</p>
-
-            <div class="row justify-content-center g-4">
-                <!-- Depoimento 1 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="testimonial-card p-4 rounded-3 shadow-sm h-100">
-                        <div class="text-warning mb-2">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <h5 class="fw-bold text-secondary">Felipe Neres</h5>
-                        <p class="fst-italic mb-0">"Trabalho excelente, rápido e feito por quem entende de direção."</p>
-                    </div>
-                </div>
-
-                <!-- Depoimento 2 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="testimonial-card p-4 rounded-3 shadow-sm h-100">
-                        <div class="text-warning mb-2">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <h5 class="fw-bold text-secondary">Jonathan Santos</h5>
-                            <p class="fst-italic mb-0">"Ótimo serviço, super indico precisando de fazer reparo da direção hidráulica ou bomba de direção. Pode procurar lutron direções tá de parabéns"</p>
-                        </div>
-                </div>
-
-                <!-- Depoimento 3 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="testimonial-card p-4 rounded-3 shadow-sm h-100">
-                        <div class="text-warning mb-2">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <h5 class="fw-bold text-secondary">Emmanuel Gonçalves</h5>
-                        <p class="fst-italic mb-0">"Ótimo atendimento, profissionais qualificados, e bom preços."</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Logo Google Reviews -->
-            <div class="mt-5">
-                <img src="img/google.png" alt="Google Reviews Logo" class="img-fluid" style="max-width: 150px;">
-            </div>
-        </div>
-    </section>
-
-    <!-- Localização - Onde Estamos -->
-    <section id="localizacao" class="py-5 bg-light text-center">
-        <div class="container">
-            <h2 class="mb-4">Onde Estamos</h2>
-            <div class="row justify-content-center align-items-stretch g-4">
-                <!-- Coluna do Mapa -->
-                <div class="col-lg-7 d-flex">
-                    <div class="mapa-responsive shadow-lg rounded-3 flex-grow-1">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230.04541260725446!2d-43.43264365001587!3d-22.701219375787815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9969df7d363151%3A0x569b0d4776ce70ce!2zTHV0cm9uIERpcmXDp8O1ZXM!5e0!3m2!1spt-BR!2sbr!4v1749442506752!5m2!1spt-BR!2sbr" 
-                            width="100%" 
-                            height="350" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Localização da Oficina Lutron no Google Maps">
-                        </iframe>
-                    </div>
-                </div>
-
-                <!-- Coluna de Informações de Contato Rápidas (lado direito do mapa) -->
-                <div class="col-lg-5 d-flex">
-                    <div class="quick-contact-info bg-white text-dark p-4 rounded-3 shadow flex-grow-1 text-start">
-                        <h4 class="mb-4 fw-bold text-secondary border-bottom border-primary pb-2">Informações de Contato</h4>
-                        <ul class="list-unstyled">
-                            <li class="d-flex align-items-start mb-3">
-                                <i class="fas fa-map-marker-alt fa-2x text-primary me-3 mt-1"></i>
-                                <div>
-                                    <h6 class="fw-bold mb-0">Endereço:</h6>
-                                    <p class="mb-0">Estrada Deputado Darcílio Ayres Raunheitti, 463 grama - Miguel Couto, Nova Iguaçu - RJ, 26065-610</p>
-                                </div>
-                            </li>
-                            <li class="d-flex align-items-start mb-3">
-                                <i class="fas fa-phone-alt fa-2x text-primary me-3 mt-1"></i>
-                                <div>
-                                    <h6 class="fw-bold mb-0">Telefone:</h6>
-                                    <p class="mb-0">(21) 96434-9438</p>
-                                </div>
-                            </li>
-                            <li class="d-flex align-items-start mb-3">
-                                <i class="fab fa-whatsapp fa-2x text-primary me-3 mt-1"></i>
-                                <div>
-                                    <h6 class="fw-bold mb-0">WhatsApp:</h6>
-                                    <p class="mb-0"><a href="https://wa.me/5521964349438" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">(21) 96434-9438</a></p>
-                                </div>
-                            </li>
-                            <li class="d-flex align-items-start mb-3">
-                                <i class="fas fa-envelope fa-2x text-primary me-3 mt-1"></i>
-                                <div>
-                                    <h6 class="fw-bold mb-0">Email:</h6>
-                                    <p class="mb-0"><a href="mailto:lutrondirecoes@outlook.com" class="text-decoration-none text-dark">lutrondirecoes@outlook.com</a></p>
-                                </div>
-                            </li>
-                            <!-- Adicionado item para Atendimento -->
-                            <li class="d-flex align-items-start mb-3">
-                                <i class="fas fa-clock fa-2x text-primary me-3 mt-1"></i> 
-                                <div>
-                                    <h6 class="fw-bold mb-0">Horário de Atendimento:</h6>
-                                    <p class="mb-0">Segunda a Sexta, das 08h às 18h.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Redes Sociais -->
-    <section id="redes-sociais" class="py-5 bg-white text-center">
-        <div class="container">
-            <h2 class="mb-5">Nossas Redes Sociais</h2>
-            <p class="lead mb-5">Conecte-se conosco e acompanhe as novidades!</p>
-
-            <div class="row justify-content-center g-4">
-                <!-- Instagram -->
-                <div class="col-md-6 col-lg-4 d-flex"> <!-- Adicionado d-flex -->
-                    <div class="social-card p-4 rounded-3 shadow-sm flex-grow-1"> <!-- Removido h-100 e adicionado flex-grow-1 -->
-                        <i class="fab fa-instagram fa-4x text-primary mb-3"></i>
-                        <h5 class="fw-bold text-secondary">Instagram</h5>
-                        <p class="text-muted">Veja nosso último Reels e fotos!</p>
-                        <a href="https://www.instagram.com/lutron.direcoes/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm mt-2">
-                            <i class="fab fa-instagram me-2"></i>Ver Perfil
-                        </a>
-                        <!-- Exemplo de embed de Reels (seria substituído pelo código real do Instagram) -->
-                        <div class="instagram-embed-placeholder mt-3"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DKfQTvTR5G4/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DKfQTvTR5G4/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver essa foto no Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DKfQTvTR5G4/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Uma publicação compartilhada por Cleiton Gonçalves (@lutron.direcoes)</a></p></div></blockquote>
-<script async src="//www.instagram.com/embed.js"></script>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Facebook -->
-                <div class="col-md-6 col-lg-4 d-flex"> <!-- Adicionado d-flex -->
-                    <div class="social-card p-4 rounded-3 shadow-sm flex-grow-1"> <!-- Removido h-100 e adicionado flex-grow-1 -->
-                        <i class="fab fa-facebook-f fa-4x text-primary mb-3"></i>
-                        <h5 class="fw-bold text-secondary">Facebook</h5>
-                        <p class="text-muted">Curta nossa página e fique por dentro!</p>
-                        <a href="https://www.facebook.com/cleitonerick.goncalves/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm mt-2">
-                            <i class="fab fa-facebook-f me-2"></i>Ver Perfil
-                        </a>
-                        <!-- Exemplo de embed de Página do Facebook (seria substituído pelo código real) -->
-                        <div class="facebook-embed-placeholder mt-3"><iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2095472494301090%2F&show_text=true&width=267&t=0" width="267" height="591" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TikTok -->
-                <div class="col-md-6 col-lg-4 d-flex"> <!-- Adicionado d-flex -->
-                    <div class="social-card p-4 rounded-3 shadow-sm flex-grow-1"> <!-- Removido h-100 e adicionado flex-grow-1 -->
-                        <i class="fab fa-tiktok fa-4x text-primary mb-3"></i>
-                        <h5 class="fw-bold text-secondary">TikTok</h5>
-                        <p class="text-muted">Vídeos rápidos e dicas automotivas!</p>
-                        <a href="https://www.tiktok.com/@lutron.direcoes" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm mt-2">
-                            <i class="fab fa-tiktok me-2"></i>Ver Perfil
-                        </a>
-                        <!-- Exemplo de embed de Perfil do TikTok (seria substituído pelo código real) -->
-                        <div class="tiktok-embed-placeholder mt-3"><blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lutron.direcoes/video/7537750402456980741" data-video-id="7537750402456980741" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@lutron.direcoes" href="https://www.tiktok.com/@lutron.direcoes?refer=embed">@lutron.direcoes</a> Fiat uno passando por um diagnóstico da coluna Elétrica. Mantenha a direção do seu carro segura! Precisando de manutenção procura a gente. LUTRON DIREÇÕES  📲 zap: (21)964349438&#47; (21)995221198 <a title="fy" target="_blank" href="https://www.tiktok.com/tag/fy?refer=embed">#fy</a> <a title="foryou" target="_blank" href="https://www.tiktok.com/tag/foryou?refer=embed">#foryou</a> <a title="mecanica" target="_blank" href="https://www.tiktok.com/tag/mecanica?refer=embed">#mecanica</a> <a title="style" target="_blank" href="https://www.tiktok.com/tag/style?refer=embed">#style</a> <a title="directions" target="_blank" href="https://www.tiktok.com/tag/directions?refer=embed">#directions</a> <a target="_blank" title="♬ Make It Better (Instrumental) - Anderson .Paak" href="https://www.tiktok.com/music/Make-It-Better-Instrumental-6792136995872180226?refer=embed">♬ Make It Better (Instrumental) - Anderson .Paak</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contato - Fale com a Lutron (agora apenas com o formulário) -->
-    <section id="contato" class="py-5 bg-dark text-white"> <!-- Fundo preto para a seção de contato -->
-        <div class="container">
-            <h2 class="mb-4 text-center">Fale com a Lutron</h2>
-            <p class="lead text-center">Estamos prontos para te atender. Envie sua mensagem ou clique abaixo para falar diretamente no WhatsApp.</p>
-            
-            <div class="row justify-content-center mt-5">
-                <!-- Coluna única para o Formulário de Contato -->
-                <div class="col-lg-8"> <!-- Formulário ocupa mais espaço agora -->
-                    <form id="contactForm" class="mx-auto bg-white p-4 rounded-3 shadow h-100">
-                        <h4 class="mb-4 fw-bold text-secondary text-center">Envie sua Mensagem</h4>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" id="contactName" placeholder="Seu nome" required aria-label="Seu nome" />
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" id="contactEmail" placeholder="Seu e-mail" required aria-label="lutrondirecoes@outlook.com" />
-                        </div>
-                        <div class="mb-3">
-                            <input type="tel" class="form-control" id="contactPhone" placeholder="Seu telefone (DDD+Número)" aria-label="Seu telefone" />
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" id="contactMessage" rows="5" placeholder="Sua mensagem" required aria-label="Sua mensagem"></textarea>
-                        </div>
-                        <!-- Área para exibir mensagens de sucesso/erro do formulário -->
-                        <div id="formMessage" class="mt-3 text-start text-dark"></div>
-                        <button type="submit" class="btn btn-primary btn-lg mt-3 w-100">Enviar Mensagem</button> <!-- Botão amarelo para envio do formulário -->
-                    </form>
-                </div>
-            </div>
-
-        </div>
-        <div class="mt-4 pt-3 border-top border-secondary text-center"> </div>
-    </section>
-
-     <!-- Footer - Rodapé -->
-    <footer class="bg-dark text-white py-4" id="main-footer">
-        <div class="container">
-            <div class="row justify-content-center text-start">
-                <!-- Coluna 1: Informações de Contato e Horário -->
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <h5 class="fw-bold text-primary border-bottom border-primary pb-2 mb-3">Contato</h5>
-                    <ul class="list-unstyled footer-list">
-                        <li>
-                            <i class="fas fa-map-marker-alt text-primary me-2"></i>
-                             Estrada Deputado Darcílio Ayres Raunheitti, 463 grama - Miguel Couto, Nova Iguaçu - RJ, 26065-610
-                        </li>
-                        <li>
-                            <i class="fas fa-phone-alt text-primary me-2"></i>
-                            (21) 96434-9438
-                        </li>
-                        <li>
-                            <i class="fab fa-whatsapp text-primary me-2"></i>
-                            <a href="https://wa.me/5521964349438" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">(21) 96434-9438</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope text-primary me-2"></i>
-                            <a href="mailto:Atendimento@lutron.com" class="text-white text-decoration-none">lutrondirecoes@outlook.com</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-clock text-primary me-2"></i>
-                            Segunda a Sexta, das 08h às 18h.
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Coluna 2: Redes Sociais -->
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <h5 class="fw-bold text-primary border-bottom border-primary pb-2 mb-3">Redes Sociais</h5>
-                    <ul class="list-unstyled footer-list">
-                        <li>
-                            <i class="fab fa-instagram text-primary me-2"></i>
-                            <a href="https://www.instagram.com/lutron.direcoes/" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">Instagram</a>
-                        </li>
-                        <li>
-                            <i class="fab fa-tiktok text-primary me-2"></i>
-                            <a href="https://www.tiktok.com/@lutron.direcoes/" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">TikTok</a>
-                        </li>
-                        <li>
-                            <i class="fab fa-facebook-f text-primary me-2"></i>
-                            <a href="https://www.facebook.com/cleitonerick.goncalves/" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">Facebook</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-store text-primary me-2"></i>
-                            <a href="https://produto.mercadolivre.com.br/MLB-5561477602-caixa-direco-hidraulica-remanufaturada-fiat-trw-_JM" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">Mercado Livre</a>
-                        </li>
-                        
-                    </ul>
-                </div>
-
-                <!-- Coluna 3: Informações da Empresa & Créditos -->
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <h5 class="fw-bold text-primary border-bottom border-primary pb-2 mb-3">Empresa</h5>
-                    <ul class="list-unstyled footer-list">
-                        <li>
-                            <i class="fas fa-building text-primary me-2"></i>
-                            <strong>Nome Completo:</strong> Oficina Lutron | Especialistas em Direção
-                        </li>
-                        <li>
-                            <i class="fas fa-id-card text-primary me-2"></i>
-                            <strong>CNPJ:</strong> 59.998.150/0001-89
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Coluna 4: Newsletter e Créditos -->
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <h5 class="fw-bold text-primary border-bottom border-primary pb-2 mb-3">Newsletter</h5>
-                    <p class="text-white-50">Cadastre-se e receba promoções exclusivas!</p>
-                    <form class="d-flex footer-newsletter-form">
-                        <input type="email" class="form-control me-2" placeholder="Seu e-mail" aria-label="Seu e-mail para newsletter">
-                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i></button>
-                    </form>
-                    <div class="mt-4 text-white-50 small">
-                  
-                        <p>&copy; 2025 Oficina Lutron | Todos os direitos reservados</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Botão flutuante do WhatsApp -->
-    <a href="https://wa.me/5521964349438" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco via WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+<!-- Header -->
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#hero" aria-label="Lutron Direções — início">
+      <img class="brand-mark" src="img/logo-lutron.png" alt="" width="34" height="34" />
+      <span class="brand-text"><strong>LUTRON</strong><span>DIREÇÕES</span></span>
     </a>
 
-    <!-- Botão flutuante do Analisador de Sintomas -->
-    <button type="button" class="symptom-analyzer-float" id="analyzeSymptomsBtn" data-bs-toggle="modal" data-bs-target="#symptomAnalyzerModal" aria-label="Analisar Sintomas do Veículo">
-        <i class="fas fa-car-crash"></i> <!-- Ícone de carro com problema -->
-    </button>
+    <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+      <a href="#hero" class="nav-link">Início</a>
+      <a href="#especialidades" class="nav-link">Especialidades</a>
+      <a href="#sobre" class="nav-link">Sobre a Lutron</a>
+      <a href="#valores" class="nav-link">Valores</a>
+      <a href="#contato" class="nav-link">Contato</a>
+    </nav>
 
+    <div class="header-actions">
+      <a href="https://wa.me/5521964349438?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Lutron%20Dire%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm header-cta">
+        <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><use href="#ic-whatsapp"/></svg> WhatsApp
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
 
-    <!-- Modal para o Analisador de Sintomas do Veículo -->
-    <div class="modal fade" id="symptomAnalyzerModal" tabindex="-1" aria-labelledby="symptomAnalyzerModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="symptomAnalyzerModalLabel">✨ Analisador de Sintomas do Veículo ✨</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Descreva brevemente os sintomas que seu veículo está apresentando. Nossa inteligência artificial pode te dar uma análise preliminar!</p>
-                    <div class="mb-3">
-                        <label for="symptomsInput" class="form-label">Seus Sintomas:</label>
-                        <textarea class="form-control" id="symptomsInput" rows="5" placeholder="Ex: 'Minha direção está fazendo um barulho estranho ao virar', 'O volante está pesado', 'O carro está puxando para um lado'." required></textarea>
-                    </div>
-                    <div id="symptomResponse" class="mt-3 p-3 bg-light rounded" style="display: none;">
-                        <div class="spinner-border text-primary" role="status" id="symptomSpinner" style="display: none;">
-                            <span class="visually-hidden">Carregando...</span>
-                        </div>
-                        <p id="symptomResultText" class="mb-0"></p>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <!-- O botão "Analisar" dentro do modal não precisa de ID para ser flutuante, apenas o gatilho -->
-                    <button type="button" class="btn btn-primary" id="analyzeSymptomsBtnModal">Analisar</button> 
-                </div>
-            </div>
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <img class="hero-media" src="img/Banner.jpg" alt="Motorista com as mãos no volante, no controle da direção do veículo" fetchpriority="high" />
+    <div class="hero-scrim" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="wrap hero-content">
+      <p class="eyebrow eyebrow-light" data-reveal>Oficina especializada em sistemas de direção</p>
+      <h1 class="hero-title" data-reveal>
+        <span class="hero-logo">LUTRON <span>DIREÇÕES</span></span>
+        <span class="hero-slogan">Resgatando o controle e a segurança do seu carro.</span>
+      </h1>
+      <p class="hero-text" data-reveal>
+        Especialistas em sistemas de direção hidráulica, elétrica e eletro-hidráulica. Diagnóstico preciso,
+        serviço transparente e segurança para você voltar a dirigir com confiança.
+      </p>
+      <div class="hero-ctas" data-reveal>
+        <a href="https://wa.me/5521964349438?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20do%20sistema%20de%20dire%C3%A7%C3%A3o%20do%20meu%20ve%C3%ADculo." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Agendar Avaliação
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg>
+        </a>
+        <a href="https://wa.me/5521964349438?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Lutron%20Dire%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+          <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><use href="#ic-whatsapp"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+      <p class="hero-badge" data-reveal>
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-target"/></svg>
+        Referência em direção elétrica e hidráulica
+      </p>
+    </div>
+    <a href="#posicionamento" class="scroll-cue" aria-label="Rolar para o conteúdo"><span></span></a>
+  </section>
+
+  <!-- POSICIONAMENTO -->
+  <section class="positioning" id="posicionamento">
+    <div class="wrap positioning-grid">
+      <div data-reveal>
+        <p class="eyebrow">Posicionamento</p>
+        <h2>Especialistas em devolver o controle ao seu veículo.</h2>
+        <p class="lead-text">
+          A Lutron Direções trabalha exclusivamente com sistemas de direção. Antes de qualquer serviço,
+          identificamos com precisão a origem do problema — para que cada intervenção seja justificada,
+          explicada e executada com segurança.
+        </p>
+      </div>
+      <blockquote class="pull-quote" data-reveal>
+        <span>Diagnosticar primeiro.</span>
+        <span>Explicar com clareza.</span>
+        <span>Executar com precisão.</span>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ESPECIALIDADES -->
+  <section class="section" id="especialidades">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Especialidades</p>
+        <h2>Especialistas em sistemas de direção</h2>
+        <p class="lead-text">Atuação exclusiva em direção veicular, com soluções definitivas para folgas, ruídos e perda de precisão no volante.</p>
+      </div>
+
+      <div class="grid-3" data-reveal>
+        <article class="card-spec">
+          <span class="card-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-drop"/></svg></span>
+          <h3>Direção Hidráulica</h3>
+          <p>Diagnóstico e reparo de sistemas de direção hidráulica, com atenção a cada componente do circuito de força.</p>
+        </article>
+        <article class="card-spec">
+          <span class="card-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-bolt"/></svg></span>
+          <h3>Direção Elétrica</h3>
+          <p>Diagnóstico e manutenção de sistemas de direção elétrica, unindo leitura eletrônica e experiência técnica.</p>
+        </article>
+        <article class="card-spec">
+          <span class="card-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-hybrid"/></svg></span>
+          <h3>Direção Eletro-Hidráulica</h3>
+          <p>Diagnóstico e reparo de sistemas eletro-hidráulicos, que combinam força hidráulica e controle eletrônico.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS / CONFIANÇA -->
+  <section class="section section-dark" id="diferenciais">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow eyebrow-light">Por que confiar</p>
+        <h2 class="light">Seu carro não precisa apenas de um reparo.<br>Precisa de um diagnóstico em que você possa confiar.</h2>
+      </div>
+
+      <div class="grid-5" data-reveal>
+        <div class="trait">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-search"/></svg>
+          <h4>Diagnóstico transparente</h4>
+          <p>Você entende o problema antes de autorizar qualquer serviço.</p>
         </div>
+        <div class="trait">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-target"/></svg>
+          <h4>Precisão técnica</h4>
+          <p>Diagnóstico e reparo com rigor técnico e acabamento premium, sem suposições.</p>
+        </div>
+        <div class="trait">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-chat"/></svg>
+          <h4>Atendimento honesto</h4>
+          <p>Clareza sobre o que é necessário — e o que não é.</p>
+        </div>
+        <div class="trait">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-shield"/></svg>
+          <h4>Foco em segurança</h4>
+          <p>A direção é o sistema que mais depende de confiabilidade.</p>
+        </div>
+        <div class="trait">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-heart"/></svg>
+          <h4>Compromisso com o cliente</h4>
+          <p>Uma relação construída para durar além de um único reparo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO -->
+  <section class="section" id="processo">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Como trabalhamos</p>
+        <h2>Um processo pensado para gerar confiança</h2>
+      </div>
+
+      <ol class="process" data-reveal>
+        <li class="process-step">
+          <span class="step-num">01</span>
+          <h3>Avaliação</h3>
+          <p>Entendemos o comportamento do veículo e identificamos os sintomas apresentados.</p>
+        </li>
+        <li class="process-step">
+          <span class="step-num">02</span>
+          <h3>Diagnóstico</h3>
+          <p>Investigamos a causa do problema com precisão, antes de qualquer intervenção.</p>
+        </li>
+        <li class="process-step">
+          <span class="step-num">03</span>
+          <h3>Explicação</h3>
+          <p>Você entende o problema e o serviço necessário antes da execução.</p>
+        </li>
+        <li class="process-step">
+          <span class="step-num">04</span>
+          <h3>Solução</h3>
+          <p>Executamos o serviço com foco em segurança, precisão e confiabilidade.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- MISSÃO / VISÃO -->
+  <section class="section" id="sobre">
+    <div class="wrap">
+      <div class="mv-grid">
+        <article class="mv-panel" data-reveal>
+          <p class="eyebrow">Missão</p>
+          <h3 class="mv-lead">Segurança, controle e conforto em cada direção.</h3>
+          <p>Garantir a máxima segurança, controle e conforto na condução de veículos, especializando-se na excelência em sistemas de direção.</p>
+          <p>Atuamos com transparência e honestidade para que cada motorista guie sua jornada com total tranquilidade e confiança.</p>
+        </article>
+        <article class="mv-panel" data-reveal>
+          <p class="eyebrow">Visão</p>
+          <h3 class="mv-lead">Autoridade técnica reconhecida na nossa região.</h3>
+          <p>Ser a oficina mecânica de referência absoluta e autoridade em sistemas de direção hidráulica, elétrica e eletro-hidráulica da nossa região.</p>
+          <p>Reconhecida pela precisão técnica, lealdade com o cliente e integridade em cada diagnóstico.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALORES -->
+  <section class="section section-alt" id="valores">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Valores</p>
+        <h2>O que sustenta cada diagnóstico</h2>
+      </div>
+
+      <div class="grid-4" data-reveal>
+        <article class="card-value">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-eye"/></svg>
+          <h3>Verdade</h3>
+          <p>Diagnósticos claros e transparentes.</p>
+        </article>
+        <article class="card-value">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-scale"/></svg>
+          <h3>Honestidade</h3>
+          <p>Serviço justo, seguro e responsável.</p>
+        </article>
+        <article class="card-value">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-link"/></svg>
+          <h3>Lealdade</h3>
+          <p>Uma relação de parceria e confiança com o cliente.</p>
+        </article>
+        <article class="card-value">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-heart"/></svg>
+          <h3>Gratidão</h3>
+          <p>Valorizamos cada pessoa que confia seu veículo ao nosso trabalho.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="manifesto" id="manifesto">
+    <div class="wrap manifesto-content" data-reveal>
+      <p class="eyebrow eyebrow-light">Manifesto</p>
+      <h2>Resgatar o controle é devolver tranquilidade.</h2>
+      <p>Quando a direção perde precisão, o motorista perde confiança.</p>
+      <p>Na Lutron Direções, o nosso trabalho vai além de reparar um sistema: buscamos devolver ao motorista a segurança, o controle e a tranquilidade necessários para seguir sua jornada.</p>
+      <p class="manifesto-close">Porque dirigir bem começa por confiar no que está entre suas mãos.</p>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final" id="contato">
+    <div class="wrap cta-content" data-reveal>
+      <h2>Seu carro merece uma direção em que você possa confiar.</h2>
+      <p>Conte com a Lutron Direções para avaliar o sistema de direção do seu veículo com transparência, precisão e responsabilidade.</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/5521964349438?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20do%20sistema%20de%20dire%C3%A7%C3%A3o%20do%20meu%20ve%C3%ADculo." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Agendar Avaliação
+        </a>
+        <a href="https://wa.me/5521964349438?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Lutron%20Dire%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+          <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><use href="#ic-whatsapp"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="#hero" aria-label="Lutron Direções — início">
+        <img class="brand-mark" src="img/logo-lutron.png" alt="" width="34" height="34" />
+        <span class="brand-text"><strong>LUTRON</strong><span>DIREÇÕES</span></span>
+      </a>
+      <p>Resgatando o controle e a segurança do seu carro.</p>
     </div>
 
-    <!-- Bootstrap Bundle com Popper.js (para componentes interativos) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Seu script personalizado (para formulário de contato, etc.) -->
-    <script src="js/scripts.js"></script>
-    <!-- Script para a integração com a API Gemini (Analisador de Sintomas) -->
-    <script src="js/gemini-analyzer.js"></script> 
+    <nav class="footer-col" aria-label="Links do site">
+      <h5>Navegação</h5>
+      <a href="#hero">Início</a>
+      <a href="#especialidades">Especialidades</a>
+      <a href="#sobre">Sobre a Lutron</a>
+      <a href="#valores">Valores</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="footer-col">
+      <h5>Contato</h5>
+      <a href="https://wa.me/5521964349438" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><use href="#ic-whatsapp"/></svg> (21) 96434-9438</a>
+      <a href="mailto:lutrondirecoes@outlook.com"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-mail"/></svg> lutrondirecoes@outlook.com</a>
+      <span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-pin"/></svg> Estrada Deputado Darcílio Ayres Raunheitti, 463, Grama — Miguel Couto, Nova Iguaçu - RJ, 26065-610</span>
+      <span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-clock"/></svg> Segunda a Sexta, das 08h às 18h</span>
+    </div>
+
+    <div class="footer-col">
+      <h5>Redes sociais</h5>
+      <a href="https://www.instagram.com/lutron.direcoes/" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-instagram"/></svg> Instagram</a>
+      <a href="https://www.facebook.com/cleitonerick.goncalves/" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-facebook"/></svg> Facebook</a>
+      <a href="https://www.tiktok.com/@lutron.direcoes" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-tiktok"/></svg> TikTok</a>
+      <a href="https://lista.mercadolivre.com.br/_CustId_2551748700?item_id=MLB4563840501&amp;category_id=MLB447370&amp;seller_id=2551748700&amp;client=recoview-selleritems&amp;recos_listing=true#origin=upp&amp;component=sellerData&amp;typeSeller=classic" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-store"/></svg> Mercado Livre</a>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <p>&copy; <span id="year"></span> Lutron Direções. Todos os direitos reservados.</p>
+    <p>CNPJ 59.998.150/0001-89</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/5521964349438?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Lutron%20Dire%C3%A7%C3%B5es." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar com a Lutron Direções no WhatsApp">
+  <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><use href="#ic-whatsapp"/></svg>
+</a>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "Lutron Direções",
+  "description": "Oficina especializada em sistemas de direção hidráulica, elétrica e eletro-hidráulica.",
+  "telephone": "+5521964349438",
+  "email": "lutrondirecoes@outlook.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Estrada Deputado Darcílio Ayres Raunheitti, 463, Grama, Miguel Couto",
+    "addressLocality": "Nova Iguaçu",
+    "addressRegion": "RJ",
+    "postalCode": "26065-610",
+    "addressCountry": "BR"
+  },
+  "openingHours": "Mo-Fr 08:00-18:00",
+  "sameAs": [
+    "https://www.instagram.com/lutron.direcoes/",
+    "https://www.facebook.com/cleitonerick.goncalves/",
+    "https://www.tiktok.com/@lutron.direcoes"
+  ]
+}
+</script>
+
+<script src="js/main.js"></script>
 </body>
 </html>
